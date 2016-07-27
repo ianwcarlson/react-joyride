@@ -161,7 +161,13 @@ export default class Joyride extends React.Component {
       state.play && props.scrollToSteps &&
       (props.scrollToFirstStep || (state.index > 0 || prevState.index > state.index))
     ) {
-      scroll.top(getRootEl(), this.getScrollTop());
+      let scrollElement;
+      if (!props.scrollElement) {
+        scrollElement = getRootEl();
+      } else {
+        scrollElement = props.scrollElement;
+      }
+      scroll.top(scrollElement, this.getScrollTop());
     }
   }
 
