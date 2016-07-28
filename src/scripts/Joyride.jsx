@@ -46,6 +46,7 @@ export default class Joyride extends React.Component {
     scrollOffset: React.PropTypes.number,
     scrollToFirstStep: React.PropTypes.bool,
     scrollToSteps: React.PropTypes.bool,
+    scrollElement: React.PropTypes.node,
     showBackButton: React.PropTypes.bool,
     showOverlay: React.PropTypes.bool,
     showSkipButton: React.PropTypes.bool,
